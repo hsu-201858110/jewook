@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b" style="background:green">
+			<h1>아이유 소개 앱</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="iu.png" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">아이유소개</a></li>
+				<li><a href="#movie" data-rel="dialog">아이유 영상</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">아이유 음악</a></li>
+				<li><a href="#gallery">아이유 사진</a></li>
+				<li><a href="#page1">만든이</a><li>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>아이유 소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="bgdokdo2.png">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>아이유 신상정보</h3>
+				<p> 본명:이지은 생년월일:1993년 5월 16일 출생지:서울특별시 광진구 </p>
+				</div>
+				<div data-role="collapsible">
+					<h3>아이유 데뷔</h3>
+					<p>2008년 9월 18일 Mnet 엠 카운트다운 '미아'D+3899일</p>
+				</div>
+				<div data-role="collapsible" >
+					<h3>아이유 정규앨범</h3>
+					<p>
+                 1집 Growing Up
+                 2집 Last Fantasy
+                 3집 Modern Times
+                 3집 리패키지 Modern Times Epilogue
+                 4집 Palette</p>
+									</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>아  이   유</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>아이유 영상</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-e">아이유팀 관련</div><br/>
+			<li><iframe width="400" height="240" src="https://www.youtube.com/embed/gDiRm_ilBpo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"></iframe></li><br/>
+			<div class="ui-bar ui-bar-e">아이유 직캠</div><br/>
+			<li><iframe width="400" height="240" src="https://www.youtube.com/embed/k2IEoWU99pI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>아이유  노래1</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">좋은날</div><br/>
+			<li><iframe width="400" height="80" src="https://www.youtube.com/embed/jeqdYqsrsA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+				<img src="3-1.jpg" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#wizard3-2" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="wizard3-2">
+		<div data-role="header">
+			<h1>아이유 노래2</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">독도는 우리땅</div><br/>
+			<iframe width="400" height="80" src="https://www.youtube.com/embed/nM0xDI5R50E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			
+			<img src="3-2.jpg" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-1"  data-direction="reverse">이전</a>
+			<a href="#home">처음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>아이유 갤러리</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><a href="4-1.jpg" rel="external"><img src="4-1.jpg" /></a></li>	
+				<li><a href="4-2.jpg" rel="external"><img src="4-2.jpg" /></a></li>	
+				<li><a href="4-3.jpg" rel="external"><img src="4-3.jpg" /></a></li>	
+				<li><a href="4-4.jpg" rel="external"><img src="4-4.jpg" /></a></li>	
+				<li><a href="4-5.jpg" rel="external"><img src="4-5.jpg" /></a></li>	
+				<li><a href="4-6.jpg" rel="external"><img src="4-6.jpg" /></a></li>	
+				<li><a href="4-7.jpg" rel="external"><img src="4-7.jpg" /></a></li>	
+				<li><a href="4-8.jpg" rel="external"><img src="4-8.jpg" /></a></li>	
+				<li><a href="4-9.jpg" rel="external"><img src="4-9.jpg" /></a></li>	 
+				<li><a href="4-10.jpg" rel="external"><img src="4-10.jpg" /></a></li>    
+				<li><a href="4-11.jpg" rel="external"><img src="4-11.jpg" /></a></li>   
+				<li><a href="4-12.jpg" rel="external"><img src="4-12.jpg" /></a></li>
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>아    이    유  </h1>
+		</div>		
+	</div>
+	
+		<div data-role="page" id="page1"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>만든이</h1>
+		</div>
+			<div data-role="content">
+			<img align="right" width=20% src="mypic.jpg"/>
+			<h2>전제욱</h2>
+			<h3>Jeon jewook</h3>
+			<a href="#page2" data-transition="slideup">약력</a> <br>
+			<a href="#page3" data-transition="slideup">학력</a> <br>
+			<a href="#page4" data-transition="slideup">경력</a>
+			<a href="index.html">돌아가기</a>
+			<ul data-role="listview" data-inset="true">
+				
+			</ul>
+		</div>
+		<div data-role="footer">
+			<h4>Copyright &copy; Jeon jewook</h4>
+		</div>
+	</div>
+	<div data-role="page" id="page2" data-title=”두번째페이지”>
+		<div data-role="header">
+			<h1>약력</h1>
+			</div>
+		<div data-role="content">
+			<li>
+			약력
+			<ul>
+				<li> 생년월일 : 1999년 06월 09일 </li>
+				<li> 주소 : 화성시 동탄반석로 264 102동 1203호 </li>
+				<li> 연락처 : 010-9266-9226 </li>
+				<li> 이메일 : jjo8430@naver.com </li>
+				</ul>
+			</li>
+			<a href="#page1" data-transition="slideup">메인</a> <br>
+			<a href="#page3" data-transition="slideup">학력</a> <br>
+			<a href="#page4" data-transition="slideup">경력</a>
+		</div>
+		<div data-role="footer">
+			<h4>Copyright &copy; Jeonjewook</h4>
+		</div>
+		</div>
+	<div data-role="page" id="page3" data-title=”세번째페이지”>
+		<div data-role="header">
+			<h1>학력</h1>
+			</div>
+		<div data-role="content">
+			<li>
+			학력
+			<ul>
+				<li> 2015.2 예당중학교 졸업</li>
+                                                                                <li> 2018.2 예당고등학교 졸업 </li>
+				<li> 2022.2  한신대학교 컴퓨터공학부 졸업</li>
+				<li> 2022.3~ 컴퓨터공학 대학원 재학중 </li>
+				</ul>
+			</li>
+			<a href="#page1" data-transition="slideup">메인</a> <br>
+			<a href="#page2" data-transition="slideup">약력</a> <br>
+			<a href="#page4" data-transition="slideup">경력</a>
+		</div>
+		<div data-role="footer">
+			<h4>Copyright &copy; Jeon jewook</h4>
+		</div>
+		</div>
+		<div data-role="page" id="page4" data-title=”네번째페이지”>
+		<div data-role="header">
+			<h1>경력</h1>
+			</div>
+		<div data-role="content">
+			<li>
+			경력
+			<ul>
+				<li> 2018.2 운전면허 시험 통과<li>
+				<li> 2019.3 ~ 한신대학교 교수학습지원센터 근로장학생 </li>
+				</ul>
+			</li>
+			<a href="#page1" data-transition="slideup">메인</a> <br>
+			<a href="#page2" data-transition="slideup">약력</a> <br>
+			<a href="#page3" data-transition="slideup">학력</a>
+		</div>
+		<div data-role="footer">
+			<h4>Copyright &copy; jeon jewook</h4>
+		</div>
+		</div>
+
+	
+	</div>
+	    
+	
+</div>	
+</body>
+</html>
